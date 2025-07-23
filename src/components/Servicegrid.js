@@ -19,7 +19,7 @@ export default function ServiceGrid() {
     .map((_, idx) => services[idx % services.length]); // navbatma-navbat xizmatlarni olish
 
   return (
-    <section id="service" className="py-24 max-w-7xl mx-auto">
+    <section id="service" className="py-24 px-4 max-w-7xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
         Bizning xizmatlarimiz
       </h2>

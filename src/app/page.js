@@ -41,9 +41,9 @@ export default function Home() {
     <>
       <main className="min-h-screen bg-white text-gray-900">
         {/* Navbar */}
-        <header className="flex items-center justify-between pt-6 pb-6 max-w-7xl mx-auto">
+        <header className="flex items-center justify-between pt-6 px-4 pb-6 max-w-7xl mx-auto">
           <h1 className="text-2xl font-bold text-black">SERENA</h1>
-          <nav className="flex space-x-6 text-sm font-semibold">
+          <nav className="flex space-x-6 text-sm font-semibold hidden sm:flex">
             <Link href="#">HUQUQIY YORDAM</Link>
             <Link href="#">XIZMATLAR</Link>
             <Link href="#">BIZ HAQIMIZDA</Link>
@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section id="hero" className="bg-gradient-to-b from-white to-gray-100 min-h-screen">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 text-gray-700 text-sm mb-40">
               <div className=" pt-10 grid gap-6 text-gray-700 text-sm">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
@@ -106,7 +106,7 @@ export default function Home() {
 
         <section id="form" className="bg-sky-500 text-white">
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 text-center py-12 px-4 max-w-7xl mx-auto">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-3 text-center py-12 px-4 max-w-7xl mx-auto">
             <div>
               <p className="text-4xl font-bold">3000+</p>
               <p className="text-sm mt-2">SODIQ MIJOZLAR</p>
