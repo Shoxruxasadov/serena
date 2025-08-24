@@ -12,9 +12,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-
-
-
 export default function Home() {
   const { register, handleSubmit, reset } = useForm();
   const [isSending, setIsSending] = useState(false);

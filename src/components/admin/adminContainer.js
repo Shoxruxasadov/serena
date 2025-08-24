@@ -8,21 +8,22 @@ import Loader from "./loader";
 
 export default function AdminContainer({ children, title }) {
     const getCookie = (name) => {
+        // if (typeof document === "undefined") return null;
         const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
         return match ? match[2] : null;
     };
     const token = getCookie("token");
-    
+
     const { data, isSuccess, isLoading, isFetching, refetch, isFetched } = useQuery({
         queryKey: ["checkToken"],
         queryFn: async () => api.get(`/api/v1/checkToken`).then(({ data }) => data),
-        enabled: true,
+        enabled: !!token,
         refetchOnWindowFocus: false,
         refetchOnReconnect: false,
-        retry: false,
+        retry: 1,
     })
 
-
+    // if (typeof document === "undefined") <Loader title={title} />
     if (!token) return <Login />
     if (isFetching) return <Loader title={title} />
     if (!data) return <Login />

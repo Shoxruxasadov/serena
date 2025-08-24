@@ -28,6 +28,7 @@ import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded
 
 export default function Sidebar() {
     const getCookie = (name) => {
+        if (typeof document === "undefined") return null;
         const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
         return match ? match[2] : null;
     };
@@ -43,32 +44,32 @@ export default function Sidebar() {
         {
             link: "/admin",
             name: t("admin.sidebar.dashboard"),
-            icon: <GroupsOutlinedIcon/>,
-            active: <GroupsRoundedIcon/>
+            icon: <GroupsOutlinedIcon />,
+            active: <GroupsRoundedIcon />
         },
         {
             link: "/admin/users",
             name: t("admin.sidebar.users"),
-            icon: <PeopleAltOutlinedIcon/>,
-            active: <PeopleAltRoundedIcon/>
+            icon: <PeopleAltOutlinedIcon />,
+            active: <PeopleAltRoundedIcon />
         },
         {
             link: "/admin/tax",
             name: t("admin.sidebar.tax"),
-            icon: <ReceiptOutlinedIcon/>,
-            active: <ReceiptRoundedIcon/>
+            icon: <ReceiptOutlinedIcon />,
+            active: <ReceiptRoundedIcon />
         },
         {
             link: "/admin/taxdata",
             name: t("admin.sidebar.taxdata"),
-            icon: <ReceiptLongOutlinedIcon/>,
-            active: <ReceiptLongRoundedIcon/>
+            icon: <ReceiptLongOutlinedIcon />,
+            active: <ReceiptLongRoundedIcon />
         },
         {
             link: "/admin/services",
             name: t("admin.sidebar.services"),
-            icon: <BusinessCenterOutlinedIcon/>,
-            active: <BusinessCenterRoundedIcon/>
+            icon: <BusinessCenterOutlinedIcon />,
+            active: <BusinessCenterRoundedIcon />
         },
     ];
 
