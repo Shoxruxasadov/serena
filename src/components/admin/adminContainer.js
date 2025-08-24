@@ -8,7 +8,7 @@ import Loader from "./loader";
 
 export default function AdminContainer({ children, title }) {
     const getCookie = (name) => {
-        // if (typeof document === "undefined") return null;
+        if (typeof document === "undefined") return true;
         const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
         return match ? match[2] : null;
     };
@@ -23,7 +23,6 @@ export default function AdminContainer({ children, title }) {
         retry: 1,
     })
 
-    // if (typeof document === "undefined") <Loader title={title} />
     if (!token) return <Login />
     if (isFetching) return <Loader title={title} />
     if (!data) return <Login />
