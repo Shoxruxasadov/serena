@@ -14,7 +14,7 @@ const services = [
 ];
 
 export default function ServiceGrid() {
-  const gridItems = Array(9)
+  const gridItems = Array(2)
     .fill(null)
     .map((_, idx) => services[idx % services.length]); // navbatma-navbat xizmatlarni olish
 
@@ -24,17 +24,18 @@ export default function ServiceGrid() {
         Bizning xizmatlarimiz
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
         {gridItems.map((service, i) => (
           <div key={i} className="cards p-6 rounded-md shadow-sm flex flex-col justify-between h-full">
             <div>
-              <p className="text-sky-600 font-semibold mb-2">{service.title}</p>
+              <p style={{color: "#53a3ff"}} className="font-semibold mb-2">{service.title}</p>
               <p className="text-gray-600 text-sm">{service.description}</p>
             </div>
             <div className="mt-6">
               <Link
                 href="#"
-                className="inline-block bg-sky-500 text-white px-4 py-2 text-sm font-semibold rounded hover:bg-sky-600 transition"
+                style={{backgroundColor: "#53a3ff"}}
+                className="inline-block text-white px-4 py-2 text-sm font-semibold rounded hover:bg-sky-600 transition"
               >
                 BATAFSIL ↗
               </Link>
